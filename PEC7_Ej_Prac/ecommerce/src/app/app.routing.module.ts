@@ -20,8 +20,8 @@ const routes: Routes = [
     },
     {
         path: '',
-        loadChildren: () => import('./article-module/article-module.module').then(module => module.ArticleModuleModule)
-    }
+        loadChildren: () => import('./forms-module/forms-module.module').then(module => module.FormsModuleModule)
+    },
 ];
 
 @NgModule({

@@ -15,19 +15,19 @@
     <p>{{ article.price | number : "1.2" | currency : "EUR" }}</p>
     <div class="d-flex justify-content-between">
       @if(article.isOnSale){
-      <a
+      <button
         href="#"
         class="btn btn-primary"
         (click)="emitArticleEvent(article.id, 'sum')"
-        >+</a
+        >+</button
       >
       {{ article.quantityInCart }}
-      <a
+      <button
         href="#"
         class="btn btn-danger"
         [ngClass]="{ countZeroButton: _isCountZero }"
         (click)="emitArticleEvent(article.id, 'res')"
-        >-</a
+        >-</button
       >
       }
     </div>

@@ -4,6 +4,7 @@ import { ArticleNewReactiveComponent } from '../article-new-reactive/article-new
 import { ArticleNewTemplateComponent } from '../article-new-template/article-new-template.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormsModuleRoutingModule } from './forms-module-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ArticleNewReactiveComponent, ArticleNewTemplateComponent],
@@ -11,7 +12,8 @@ import { FormsModuleRoutingModule } from './forms-module-routing.module';
     CommonModule,
     FormsModuleRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class FormsModuleModule { 

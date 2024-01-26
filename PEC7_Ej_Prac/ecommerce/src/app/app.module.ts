@@ -5,10 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-// import { ValidImgPipePipe } from './pipe/valid-img-pipe.pipe';
-import { ArticleItemComponent } from './article-item/article-item.component';
 import { AppRoutingModule } from './app.routing.module';
 
 

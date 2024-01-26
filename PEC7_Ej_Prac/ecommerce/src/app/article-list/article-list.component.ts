@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Observable, Subscription, map } from 'rxjs';
 import { ArticleServiceService } from '../services/articles/article-service.service';
-import { OperationQuantity, UserIsLogged } from '../interfaces/interfaces';
+import { OperationQuantity } from '../interfaces/interfaces';
 import { UserStoreService } from '../services/user-store/user-store.service';
 
 export interface Article {

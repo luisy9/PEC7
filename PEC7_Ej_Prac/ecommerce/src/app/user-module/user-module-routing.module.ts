@@ -8,8 +8,9 @@ const routes: Routes = [
   {
     path: '',
     children: [
-      { path: '', component: LoginComponent, canActivate: [guardAccessLoginGuard] },
-      { path: 'register', component: RegisterComponent}
+      { path: 'login', component: LoginComponent, canActivate: [guardAccessLoginGuard] },
+      { path: 'register', component: RegisterComponent},
+      {path: '', redirectTo: 'login', pathMatch: 'full'}
     ]
   }
 ];

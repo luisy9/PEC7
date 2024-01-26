@@ -15,7 +15,7 @@ export class ArticleServiceService {
   constructor(private httpClient: HttpClient) { }
 
   getArticle(): Observable<Article[]> {
-    const url: string = `http://localhost:3000/api/articles`;
+    const url: string = `http://localhost:3000/api/articles/`;
     return this.httpClient.get<Article[]>(url);
   }
 
@@ -23,8 +23,9 @@ export class ArticleServiceService {
     return this._refresh$;
   }
 
-  getArticleWithId(code: string): Observable<Article>{
-    return this.httpClient.get<Article>(this.apiUrl + code);
+  getArticleWithId(code: string): any{
+    console.log(this.apiUrl + code)
+    // return this.httpClient.get<Article>(this.apiUrl + code);
   }
 
   //Cambiar la cantidad de los productos haciendo una consulta para cambiarlo en la api, y luego recoger los datos.
@@ -61,7 +62,7 @@ export class ArticleServiceService {
     }
 
     // Creamos nuevo atriculo
-    this.httpClient.post<Article[]>(`http://localhost:3000/api/articles`, { ...article }).subscribe({
+    this.httpClient.post<Article[]>(`http://localhost:3000/api/articles/`, { ...article }).subscribe({
       error: error => console.log('La consulta no ha funcionado!', error)
     })
   }
