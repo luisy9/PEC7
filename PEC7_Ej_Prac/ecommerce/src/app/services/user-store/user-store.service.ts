@@ -14,7 +14,7 @@ export class UserStoreService {
     this.data$ = dataIsLoggedUser.isLoggedUserGetter;
   }
 
-  //Funcion para almacenar dependiendo si le llega un token o no, esto quiere decir que se ha iniciado session con el usuario o no.
+  //Funcion para almacenar en el localStorage dependiendo si le llega un token o no, esto quiere decir que se ha iniciado session con el usuario o no.
   isLoggedUser() {
     this.data$.subscribe((token: string) => {
       if (token.length > 0) {
