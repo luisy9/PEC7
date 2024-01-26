@@ -12,10 +12,12 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
+
   get isLoggedUserGetter(): Observable<string>{
     return this.isLoggedUser.asObservable();
   }
 
+  //Servicio para poder hacer un Login del usuario que hayamos creado en el servidor realizando una consulata de post
   login({ name, password }: User): any {
     if ((name && password).length > 0) {
       return this.httpClient.post<string>('http://localhost:3000/api/user/login/', { name, password }).pipe(tap((res: any) => {
@@ -29,6 +31,7 @@ export class UserService {
     }
   }
 
+  //Servicio para poder crear un usuario en el array de usuario en el servidor realizando una consulta post
   register({ name, password }: User): any {
     if ((name && password).length > 0) {
       return this.httpClient.post<string>('http://localhost:3000/api/user/register/', { name, password }).subscribe();

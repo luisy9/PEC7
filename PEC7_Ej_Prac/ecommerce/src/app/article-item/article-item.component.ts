@@ -15,6 +15,7 @@ export class ArticleItemComponent implements OnInit{
   public serviceArticle = inject(ArticleServiceService);
 
   ngOnInit(): void {
+    //Funciones para mostrar por pantalla el articulo seleccionado, recogiendo el id de la url
     this.idArticle = this._route.snapshot.paramMap.get('id')!;
     this.serviceArticle.getArticleWithId(this.idArticle).subscribe((article: Article) => {
       this.articles$ = article;
