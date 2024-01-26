@@ -5,10 +5,11 @@ import { ArticleModuleRoutingModule } from './article-module-routing.module';
 import { ArticleListComponent } from '../article-list/article-list.component';
 import { ArticleComponent } from '../article/article.component';
 import { ValidImgPipePipe } from '../pipe/valid-img-pipe.pipe';
+import { ArticleItemComponent } from '../article-item/article-item.component';
 
 
 @NgModule({
-  declarations: [ ArticleListComponent, ArticleComponent, ValidImgPipePipe ],
+  declarations: [ ArticleListComponent, ArticleComponent, ArticleItemComponent, ValidImgPipePipe ],
   imports: [
     CommonModule,
     ArticleModuleRoutingModule,

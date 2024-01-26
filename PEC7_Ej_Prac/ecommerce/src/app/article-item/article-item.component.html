@@ -3,15 +3,11 @@
   style="width: 18rem"
 >
   <div class="card-body">
-    <h5 class="card-title">{{ articles$.name }}</h5>
-      <img
-        src={{ articles$.imageUrl | validImgPipe }}
-        alt="{{ articles$.name }}"
-        style="width: 100%"
-      />
+    <h5 class="card-title">{{ articles$?.name }}</h5>
     <div class="d-flex justify-content-between">
-      @if(articles$.isOnSale){
-        {{ articles$.quantityInCart }}
+      <img [src]="articles$.imageUrl | validImgPipe : articles$.imageUrl" alt={{articles$?.name}} style="width: 100%;">
+      @if(articles$?.isOnSale){
+        {{ articles$?.quantityInCart }}
       }
     </div>
   </div>

@@ -5,9 +5,9 @@
 >
   <div class="card-body">
     <h5 class="card-title">{{ article.name }}</h5>
-    <a [routerLink]="['/article', article.id]">
+    <a [routerLink]="['/article/', article.id]">
       <img
-        src="{{ article.imageUrl }}"
+        src="{{ article.imageUrl | validImgPipe: article.imageUrl}}"
         alt="{{ article.name }}"
         style="width: 100%"
       />
