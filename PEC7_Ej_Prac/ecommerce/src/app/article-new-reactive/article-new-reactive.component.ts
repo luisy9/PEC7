@@ -26,7 +26,7 @@ export class ArticleNewReactiveComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // this.articleService.createArticle(this.myForm.value);
+    this.articleService.createArticle(this.myForm.value);
   }
 
 
