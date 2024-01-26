@@ -23,9 +23,9 @@ export class ArticleServiceService {
     return this._refresh$;
   }
 
+  //Funcion para recoger el Articulo con el id correcto.
   getArticleWithId(code: string): any{
-    console.log(this.apiUrl + code)
-    // return this.httpClient.get<Article>(this.apiUrl + code);
+    return this.httpClient.get<Article>(this.apiUrl + code);
   }
 
   //Cambiar la cantidad de los productos haciendo una consulta para cambiarlo en la api, y luego recoger los datos.
