@@ -2,7 +2,6 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ArticleServiceService } from '../services/articles/article-service.service';
 import { Article } from '../interfaces/interfaces';
-
 @Component({
   selector: 'app-article-item',
   templateUrl: './article-item.component.html',

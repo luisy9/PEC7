@@ -11,7 +11,7 @@ import { ValidImgPipePipe } from '../pipe/valid-img-pipe.pipe';
   declarations: [ ArticleListComponent, ArticleComponent, ValidImgPipePipe ],
   imports: [
     CommonModule,
-    ArticleModuleRoutingModule
+    ArticleModuleRoutingModule,
   ]
 })
 export class ArticleModuleModule {
