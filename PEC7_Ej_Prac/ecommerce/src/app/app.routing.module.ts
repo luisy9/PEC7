@@ -8,6 +8,7 @@ luego si hacemos click en la de register se cargara la de register
 Article List path: ‘article/list’,
 Create Article path: ‘newArticleCreate’,
 Detalle del articulo: article/:id
+Mediante esta configuracion podremos hacer uso de los modulos con lazy loading para cargar o no el javaScript del componente.
 */
 const routes: Routes = [
     {
