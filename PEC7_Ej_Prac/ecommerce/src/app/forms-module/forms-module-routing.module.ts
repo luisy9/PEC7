@@ -4,6 +4,9 @@ import { ArticleNewTemplateComponent } from '../article-new-template/article-new
 import { ArticleNewReactiveComponent } from '../article-new-reactive/article-new-reactive.component';
 import { guardAccessGuard } from '../guards/guard-access.guard';
 
+
+/* La ruta para crear un artículo deberá estar protegida y accesible después de
+autenticarse (login), si el usuario no esta logeado no podra crear un articulo */
 const routes: Routes = [
   {
     path: '',
