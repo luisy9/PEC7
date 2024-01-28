@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-
+import { Component, inject } from '@angular/core';
+import { UserStoreService } from '../services/user-store/user-store.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,7 +7,16 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class NavbarComponent {
 
-  isMenuOpen = false;
+  public isMenuOpen = false;
+  public userService = inject(UserStoreService);
+
+  get _isUserLogged() {
+    return this.userService.userIsLogged;
+  }
+
+  onLogoutUser() {
+    this.userService.logoutUser();
+  }
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;

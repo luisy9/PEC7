@@ -26,4 +26,12 @@ export class UserStoreService {
       }
     })
   }
+
+  logoutUser() {
+    localStorage.removeItem('user-info');
+  }
+
+  get userIsLogged() {
+    return localStorage.getItem('user-info') || false;
+  }
 }
