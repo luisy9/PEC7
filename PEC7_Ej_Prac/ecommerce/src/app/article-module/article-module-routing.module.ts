@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ArticleListComponent } from '../article-list/article-list.component';
 import { ArticleItemComponent } from '../article-item/article-item.component';
-import { ArticleComponent } from '../article/article.component';
+
+/* Creamos las rutas para cargar los componentes de article list y el article details */
 
 const routes: Routes = [
   {
