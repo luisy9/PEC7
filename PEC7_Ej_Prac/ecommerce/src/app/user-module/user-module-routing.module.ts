@@ -4,6 +4,9 @@ import { LoginComponent } from '../login/login.component';
 import { RegisterComponent } from '../register/register.component';
 import { guardAccessLoginGuard } from '../guards/guard-access-login.guard';
 
+
+/* Crearemos las rtutas necesarias para cargar los componentes y hacer uso de los guards para proteger las rutas
+Ademas de establecer la ruta por defecto */
 const routes: Routes = [
   {
     path: '',
