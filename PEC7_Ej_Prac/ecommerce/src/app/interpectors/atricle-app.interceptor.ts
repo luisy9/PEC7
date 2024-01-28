@@ -1,17 +1,14 @@
-import { HttpErrorResponse, HttpInterceptorFn } from '@angular/common/http';
-import { catchError, throwError } from 'rxjs';
+import { HttpInterceptorFn } from '@angular/common/http';
 
+//Creamos el Interceptor para mandar el token de autenticacion de el usuario para que lo mande por la request.
 export const atricleAppInterceptor: HttpInterceptorFn = (req, next) => {
 
-  return next(req).pipe(catchError((error: HttpErrorResponse) => {
+  const authToken = localStorage.getItem('user-info');
+  const authRequest = authToken ? req.clone({
+    setHeaders: {
+      Authorization: authToken,
+    },
+  }) : req;
 
-    let errorMessage = '';
-    if(error.error instanceof ErrorEvent){
-      errorMessage = `Error: ${error.error.message}`;
-    }else {
-      errorMessage = `Error code: ${error.status}, message: ${error.message}`;
-    }
-
-    return throwError(() => errorMessage);
-  }));
+  return next(authRequest);
 };
